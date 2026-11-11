@@ -4,3 +4,4 @@ psutil
 aiohttp
 web3
 python-dotenv
+
