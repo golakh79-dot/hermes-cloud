@@ -1,0 +1,25 @@
+﻿model:
+  default: llama-3.3-70b-versatile
+  provider: openai-api
+  base_url: https://api.groq.com/openai/v1
+  api_mode: chat_completions
+_config_version: 51
+platforms:
+  telegram:
+    enabled: true
+    home_channel:
+      platform: telegram
+      chat_id: '452259540'
+      name: Alireza
+      user_id: '452259540'
+onboarding:
+  seen:
+    busy_input_prompt: true
+display:
+  busy_input_mode: queue
+messaging:
+  telegram:
+    allowed_users:
+      - 452259540
+approvals:
+  destructive_slash_confirm: false

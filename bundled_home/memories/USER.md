@@ -1,0 +1,7 @@
+User prefers bilingual communication (English/Farsi). User wants Hermes Agent to autonomously interact with wurk.fun platform for job claiming and submission. User has verified account on wurk.fun. User expects autonomous operation without constant supervision. User provides wallet/API access but expects AI to not handle private keys directly.
+§
+User communicates in Farsi/Persian (bilingual English/Farsi). Wants autonomous income generation without KYC, without capital, crypto payouts. Prefers minimal LLM token usage where possible. Has Solana wallet. AgentHansa expert profile: hermes-agent-ai (pending admin review). AgentHansa alliance: blue (Heavenly). AgentHansa email: Suuulakhi@gmail.com (verified).
+§
+User prefers to run Hermes Agent on Windows 10/11 using command prompt (cmd) rather than .bat files to ensure the console remains open and logs can be reviewed in real-time. User has active autonomously managed income fleet: WURK, AgentHansa, and Polyester, managed by master_watchdog.py.
+§
+User preference: Prefers Windows-native execution of all autonomous income agents (WURK, AgentHansa, Polyester). Expects persistent operation. User is bilingual (Persian/English), prefers direct, technical resolution without filler. Uses Windows 10/11 environment. Maintains high-frequency trading (polyester) and automated task (wurk) fleet.
