@@ -73,7 +73,7 @@ def default_state():
         "seen_tweets": [],
         "recent_digest": [],
         "discovered": [],
-        "active_model": "HERMES",
+        "active_model": os.getenv("ROUTER_MODEL", "llama-3.3-70b-versatile"),
         "radar_enabled": True,
         "max_age_minutes": 30,
         "waiting_input": None
@@ -216,8 +216,8 @@ def decode_9router_http_body(raw_http_text):
             idx = brace + 1
     return best_text.strip() if best_text else raw_http_text.strip()
 
-def ask_9router(prompt, system_prompt, model="HERMES"):
-    models_to_try = [model, "gemini/gemini-3.6-flash", "groq/openai/gpt-oss-120b", "nvidia/nvidia/nemotron-3-ultra-550b-a55b"]
+def ask_9router(prompt, system_prompt, model="llama-3.3-70b-versatile"):
+    models_to_try = [os.getenv("ROUTER_MODEL", "llama-3.3-70b-versatile"), "llama-3.3-70b-versatile", "llama-3.1-8b-instant", model, "gemini/gemini-3.6-flash"]
     seen_m = set()
     ordered_models = [m for m in models_to_try if not (m in seen_m or seen_m.add(m))]
 
@@ -911,4 +911,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
