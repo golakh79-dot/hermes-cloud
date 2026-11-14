@@ -15,6 +15,7 @@ platforms:
 onboarding:
   seen:
     busy_input_prompt: true
+    skipped: true
 display:
   busy_input_mode: queue
 messaging:
