@@ -1,4 +1,4 @@
-import os
+﻿import os
 import sys
 import time
 import uuid
@@ -8,13 +8,13 @@ import socket
 import logging
 import traceback
 
-HOME_DIR = r"D:\HERMES\Hermes_Portable_Data\home"
-LOG_FILE = os.path.join(HOME_DIR, "scripts", "polyester_trader.log")
+HOME_DIR = os.path.dirname(os.path.abspath(__file__))
+LOG_FILE = os.path.join(HOME_DIR, "polyester_trader.log")
 LOCK_PORT = 59423
 
-API_KEY_ID = "ak_7d0a74c4acfa0a230055dfd6d63aff8d"
-API_PRIVATE_KEY = "de5c1ada164e6cacd3cef66cd4b4f9df7db53902de00680fd91c0500b80f7bdd"
-ACCOUNT_ID = "AcidicTie"
+API_KEY_ID = os.getenv("API_KEY_ID", "")
+API_PRIVATE_KEY = os.getenv("POLYESTER_PRIVATE_KEY", os.getenv("API_PRIVATE_KEY", ""))
+ACCOUNT_ID = os.getenv("ACCOUNT_ID", "")
 
 os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
 
@@ -294,3 +294,5 @@ if __name__ == "__main__":
     except Exception as fatal_e:
         log(f"[FATAL] {fatal_e}\n{traceback.format_exc()}")
         input("\nPress Enter to close window...")
+
+

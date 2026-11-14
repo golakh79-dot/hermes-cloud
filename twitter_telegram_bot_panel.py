@@ -1,14 +1,14 @@
-import os, re, sys, time, json, html, socket, threading
+﻿import os, re, sys, time, json, html, socket, threading
 import urllib.parse, urllib.request, urllib.error
 from datetime import datetime
 
-HOME_DIR = r"D:\HERMES\Hermes_Portable_Data\home"
+HOME_DIR = os.path.dirname(os.path.abspath(__file__))
 STATE_FILE = os.path.join(HOME_DIR, "twitter_targets.json")
 ENV_FILE = os.path.join(HOME_DIR, ".env")
 LOG_FILE = os.path.join(HOME_DIR, "twitter_hub.log")
 
 ADMIN_CHAT_ID = 452259540
-ROUTER_BASE = os.getenv("AI_BASE_URL", "http://127.0.0.1:20128/v1")
+ROUTER_BASE = "http://127.0.0.1:20128/v1"
 ROUTER_CHAT_URL = f"{ROUTER_BASE}/chat/completions"
 LOCK_PORT = 59421
 
@@ -911,3 +911,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

@@ -1,7 +1,9 @@
-﻿pyTelegramBotAPI
-requests
-psutil
-aiohttp
-web3
+﻿requests
 python-dotenv
-
+aiohttp
+websockets
+eth-account
+web3
+base58
+pyTelegramBotAPI
+openai

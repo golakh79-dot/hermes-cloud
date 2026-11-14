@@ -1,10 +1,10 @@
-import os, re, sys, time, json, html, base64, socket, threading
+﻿import os, re, sys, time, json, html, base64, socket, threading
 import urllib.parse, urllib.request, urllib.error
 from datetime import datetime
 import base58
 from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
 
-HOME_DIR = r"D:\HERMES\Hermes_Portable_Data\home"
+HOME_DIR = os.path.dirname(os.path.abspath(__file__))
 ENV_FILE = os.path.join(HOME_DIR, ".env")
 TRACKER_FILE = os.path.join(HOME_DIR, "wurk_success_tracker.json")
 STATE_FILE = os.path.join(HOME_DIR, "wurk_pro_state.json")
@@ -64,7 +64,7 @@ def get_private_key():
     return k
 
 def get_bot_token():
-    return load_env_var(["WURK_BOT_TOKEN"]) or os.getenv("TELEGRAM_BOT_TOKEN", "")
+    return load_env_var(["WURK_BOT_TOKEN"]) or "8786109587:AAHZRf8PLVKOapGokRtDZwNoBQ7MxdMR230"
 
 def get_router_key():
     return load_env_var(["RAMP_ROUTER_API_KEY", "OPENAI_API_KEY", "ROUTER_API_KEY"]) or "9router-local"
@@ -648,3 +648,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
