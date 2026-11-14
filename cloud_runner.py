@@ -44,7 +44,7 @@ def run_hermes_gateway():
     while True:
         print("[🚀 GATEWAY] Starting Hermes Core Gateway (Telegram + 41 Skills)...", flush=True)
         # اجرای مستقیم cli.py gateway run
-        proc = subprocess.Popen([sys.executable, "-X", "utf8", "/app/cli.py", "gateway", "run"])
+        env = os.environ.copy(); env["PYTHONPATH"] = "/app"; proc = subprocess.Popen([sys.executable, "-X", "utf8", "/app/cli.py", "gateway", "run"], cwd="/app", env=env)
         proc.wait()
         print(f"[⚠️ GATEWAY] Exited ({proc.returncode}). Auto-healing in 5s...", flush=True)
         time.sleep(5)
@@ -70,3 +70,4 @@ if __name__ == "__main__":
 
     while True:
         time.sleep(60)
+
