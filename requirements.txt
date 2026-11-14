@@ -1,15 +1,35 @@
-﻿python-telegram-bot>=21.0
-openai>=1.30.0
+﻿ruamel.yaml
 pyyaml
 python-dotenv
 requests
 aiohttp
 httpx
+websockets
+openai>=1.30.0
+python-telegram-bot>=21.0
+pyTelegramBotAPI
 rich
 prompt-toolkit
 pydantic
+psutil
+cryptography
+tenacity
+packaging
+distro
+platformdirs
+truststore
+certifi
 beautifulsoup4
 lxml
 duckduckgo-search
-psutil
-pyTelegramBotAPI
+eth-account
+web3
+base58
+filetype
+pillow
+tiktoken
+openai==2.24.0; python_version >= '3.14'
+certifi==2026.10.19; python_version >= '3.14'
+truststore==0.10.4; python_version >= '3.14'
+python-dotenv==1.2.2; python_version >= '3.14'
+fire==0.7.1; python_version >= '3.14'
